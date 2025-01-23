@@ -9,7 +9,9 @@ class ElementsPage(BasePage):
 
         self.footer=WebElement(driver, '#app > footer > span')
         self.center_element = WebElement(self.driver, '#app > div > div > div > div.col-12.mt-4.col-md-6')
-
-
+        self.icon = WebElement(self.driver, 'header > a > img')
+        self.btn_sidebar_first = WebElement(driver, '#app > div > div > div > div:nth-child(1) > div > div > div:nth-child(1) > span')
+        self.btn_sidebar_first_textbox = WebElement(driver, '#item-0')
+        self.btn_sidebar_first_checkbox = WebElement(driver, '#item-1')
 
 
