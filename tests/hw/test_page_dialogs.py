@@ -1,13 +1,13 @@
 from pages.dialogs_page import ModalDialogs
 from conftest import browser
 from pages.demoqa import Demoqa
-#
-# def test_modal_dialogs(browser):
-#     modal_dialogs = ModalDialogs(browser)
-#     modal_dialogs.visit()
-#
-#     assert modal_dialogs.btns_under_menu.check_count_elements(count = 5)
-#
+
+def test_modal_dialogs(browser):
+    modal_dialogs = ModalDialogs(browser)
+    modal_dialogs.visit()
+
+    assert modal_dialogs.btns_under_menu.check_count_elements(count = 5)
+
 
 def test_navigation_dialogs(browser):
     navigation_modal = ModalDialogs(browser)
