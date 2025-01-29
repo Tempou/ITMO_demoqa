@@ -35,5 +35,64 @@ def test_webtables(browser):
     webtable.btn_delete.click()
     assert not webtable.newstr.get_dom_attribute('class') == 'rt-tr -odd'
 
+def test_webtables2(browser):
+    webtable = WebTables(browser)
+
+    webtable.visit()
+    webtable.rows_scroll.click()
+    webtable.rows_scroll_5.click()
+    time.sleep(2)
+    assert webtable.btn_next.get_dom_attribute('disabled') == 'true'
+    assert webtable.btn_prev.get_dom_attribute('disabled') == 'true'
+
+    webtable.btn_add.click()
+    webtable.first_name.send_keys("123")
+    webtable.last_name.send_keys("123")
+    webtable.email.send_keys("ttt1tt@ttt.com")
+    webtable.age.send_keys("22")
+    webtable.salary.send_keys("199831")
+    webtable.department.send_keys("Department")
+    webtable.btn_submit.click()
+    time.sleep(1)
+
+    webtable.btn_add.click()
+    webtable.first_name.send_keys("Ti1m")
+    webtable.last_name.send_keys("Cap1ello")
+    webtable.email.send_keys("ttt4tt@ttt.com")
+    webtable.age.send_keys("22")
+    webtable.salary.send_keys("199831")
+    webtable.department.send_keys("Department")
+    webtable.btn_submit.click()
+    time.sleep(1)
+
+    webtable.btn_add.click()
+    webtable.first_name.send_keys("1313Tim")
+    webtable.last_name.send_keys("C1313apello")
+    webtable.email.send_keys("tt5ttt@ttt.com")
+    webtable.age.send_keys("22")
+    webtable.salary.send_keys("199831")
+    webtable.department.send_keys("Department")
+    webtable.btn_submit.click()
+    time.sleep(1)
+    assert not webtable.btn_next.get_dom_attribute('disabled') == 'true'
+    assert webtable.btn_prev.get_dom_attribute('disabled') == 'true'
+
+    webtable.btn_next.click()
+    assert not webtable.btn_prev.get_dom_attribute('disabled') == 'true'
+    assert webtable.btn_next.get_dom_attribute('disabled') == 'true'
+    time.sleep(2)
+
+    webtable.btn_prev.click()
+    assert not webtable.btn_next.get_dom_attribute('disabled') == 'true'
+    assert webtable.btn_prev.get_dom_attribute('disabled') == 'true'
+    time.sleep(2)
+
+
+
+
+
+
+
+
 
 
