@@ -49,14 +49,16 @@ def test_webtables2(browser):
     assert webtable.btn_next.get_dom_attribute('disabled') == 'true'
     assert webtable.btn_prev.get_dom_attribute('disabled') == 'true'
 
-    webtable.btn_add.click()
-    webtable.first_name.send_keys("123")
-    webtable.last_name.send_keys("123")
-    webtable.email.send_keys("ttt1tt@ttt.com")
-    webtable.age.send_keys("22")
-    webtable.salary.send_keys("199831")
-    webtable.department.send_keys("Department")
-    webtable.btn_submit.click()
+################################Для себя на будущее
+    for i in range(5):
+        webtable.btn_add.click()
+        webtable.first_name.send_keys("123")
+        webtable.last_name.send_keys("123")
+        webtable.email.send_keys("ttt1tt@ttt.com")
+        webtable.age.send_keys("22")
+        webtable.salary.send_keys("199831")
+        webtable.department.send_keys("Department")
+        webtable.btn_submit.click()
     time.sleep(1)
 
     webtable.btn_add.click()
