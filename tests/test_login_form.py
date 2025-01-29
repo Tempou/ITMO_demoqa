@@ -2,6 +2,7 @@ from pages.form_page import FormPage
 from conftest import browser
 import time
 
+
 def test_login_form(browser):
     form_page = FormPage(browser)
 
@@ -21,5 +22,24 @@ def test_login_form(browser):
 
     assert form_page.modal_dialog.exists()
     form_page.btn_close_modal.click_force()
+
+
+def test_state_city(browser):
+    form_page = FormPage(browser)
+
+    form_page.visit()
+    form_page.state.click()
+    time.sleep(2)
+    form_page.state_ncr.click()
+    form_page.city.click()
+    time.sleep(2)
+    form_page.city_noida.click()
+    time.sleep(2)
+
+
+def test_state_city_keys(browser):
+    form_page = FormPage(browser)
+    form_page.visit()
+
 
 

@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
+from conftest import browser
 
 class WebElement:
     def __init__(self, driver, locator='', locator_type='css'):
@@ -77,3 +78,7 @@ class WebElement:
         else:
             print('Locator Type' + self.locator_type + 'not correct')
         return False
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
+
