@@ -14,3 +14,4 @@ def test_webtables(browser):
     time.sleep(2)
     assert webtable.no_data.exists()
 
+
