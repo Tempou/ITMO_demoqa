@@ -2,6 +2,8 @@ from pages.webtables_page import WebTables
 from conftest import browser
 import time
 
+
+#Задача 1
 def test_webtables(browser):
     webtable = WebTables(browser)
 
@@ -35,6 +37,8 @@ def test_webtables(browser):
     webtable.btn_delete.click()
     assert not webtable.newstr.get_dom_attribute('class') == 'rt-tr -odd'
 
+
+#Задача 2*
 def test_webtables2(browser):
     webtable = WebTables(browser)
 
