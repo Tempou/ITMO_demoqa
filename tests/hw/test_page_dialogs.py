@@ -1,3 +1,4 @@
+import time
 from pages.dialogs_page import ModalDialogs
 from conftest import browser
 from pages.demoqa import Demoqa
