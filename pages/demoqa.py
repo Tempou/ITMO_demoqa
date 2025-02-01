@@ -9,3 +9,4 @@ class Demoqa(BasePage):
 
         self.icon=WebElement(driver, '#app > header > a > img')
         self.btn_elements=WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
+        self.caterogies=WebElement(driver, 'h5')

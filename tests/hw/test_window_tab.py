@@ -16,4 +16,3 @@ def test_linkspage(browser):
     links_page.home_link.click()
     time.sleep(1)
     assert len(browser.window_handles) == 2
-
